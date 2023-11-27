@@ -1,40 +1,91 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">Meine besten Schul-Projekte Präsentation
+        </section>
+        <section>
+            <section> Minesweeper mit JavaFX
+                <img src="media/minesweeper-idle.png">
+            </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+            <section>Verloren
+                <img src="media/minesweeper-lost.png">
+            </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+            <section>Enthusiast
+                <img src="media/minesweeper-enthusiast.png">
+            </section>
+
+
+            <section>Code Beispiel
+                <pre>
+                <code data-trim data-noescape>
+                /**
+                 * generates Fields with all properties
+                 * @throws InvalidDifficultyException thrown when mine percentage can not be determined
+                 */
+                private void generateFields() throws InvalidDifficultyException {
+                    grid = new Field[columns][rows];
+
+                    for (int col = 0; col < columns; col++) {
+                        for (int row = 0; row < rows; row++) {
+                            Field field = new Field(col, row, generateBombProbalitity(getMinePercentage()), boardSize);
+                            grid[col][row] = field;
+                            addToPane(field);
+                        }
+                    }
+                }
+            </code>
+            </pre>
+            </section>
+        </section>
+        <section>
+            <section>Quiz App Startmenu
+                <img src="media/image1.png">
+            </section>
+            <section>
+                <img src="media/image2.png" style="width: 75%; height: 75%">
+            </section>
+            <section>
+                <h5>
+                    Quiz Selection
+                </h5>
+                <img src="media/image3.png">
+            </section>
+            <section>
+                <img src="media/image4.png">
+            </section>
+            <section>
+                <img src="media/image5.png">
+            </section>
+        </section>
+    </div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+  })
+</script>
+</body>
 </html>
